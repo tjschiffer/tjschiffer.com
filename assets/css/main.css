@@ -8,6 +8,11 @@
 
 /* Reset */
 
+	/*html, body{
+		height: 100%;
+		min-height: 100%;
+	}*/
+
 	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 		margin: 0;
 		padding: 0;
@@ -1622,7 +1627,7 @@
 	}
 
 	body {
-		background: #312450;
+		background: #0661B7;
 	}
 
 		body.is-loading *, body.is-loading *:before, body.is-loading *:after {
@@ -1721,10 +1726,10 @@
 		}
 
 			h1.major:after {
-				background-image: -moz-linear-gradient(to right, #5e42a6, #b74e91);
-				background-image: -webkit-linear-gradient(to right, #5e42a6, #b74e91);
-				background-image: -ms-linear-gradient(to right, #5e42a6, #b74e91);
-				background-image: linear-gradient(to right, #5e42a6, #b74e91);
+				background-image: -moz-linear-gradient(to right, #5e42a6, #0661B7);
+				background-image: -webkit-linear-gradient(to right, #5e42a6, #0661B7);
+				background-image: -ms-linear-gradient(to right, #5e42a6, #0661B7);
+				background-image: linear-gradient(to right, #5e42a6, #0661B7);
 				-moz-transition: max-width 0.2s ease;
 				-webkit-transition: max-width 0.2s ease;
 				-ms-transition: max-width 0.2s ease;
@@ -1976,7 +1981,7 @@
 		button.special,
 		.button.special {
 			background-color: #ffffff;
-			color: #312450 !important;
+			color: #0661B7 !important;
 		}
 
 			input[type="submit"].special:after,
@@ -2406,7 +2411,7 @@
 		}
 
 	select option {
-		background-color: #312450;
+		background-color: #0661B7;
 		color: #ffffff;
 	}
 
@@ -2552,7 +2557,7 @@
 			display: block;
 			background: #ffffff;
 			border-radius: 100%;
-			color: #312450;
+			color: #0661B7;
 			text-align: center;
 			line-height: 2.5em;
 			margin: 0 0 1.3em 0;
@@ -2567,11 +2572,11 @@
 				}
 
 				.wrapper.style1-alt .icon.major:before {
-					color: #493382;
+					color: #0661B7;
 				}
 
 				.wrapper.style2 .icon.major:before {
-					color: #5052b5;
+					color: #0661B7;
 				}
 
 				.wrapper.style2-alt .icon.major:before {
@@ -3012,7 +3017,7 @@
 		-webkit-flex-direction: row;
 		-ms-flex-direction: row;
 		flex-direction: row;
-		min-height: 22.5em;
+		min-height: 100%;
 	}
 
 		body.is-ie .spotlights > section {
@@ -3253,23 +3258,23 @@
 		}
 
 		.wrapper.style1 {
-			background-color: #0661B7;
+			background-color: #2085E4;
 		}
 
 		.wrapper.style1-alt {
-			background-color: #493382;
+			background-color: #0661B7;
 		}
 
-		.wrapper.style2 {
-			background-color: #5052b5;
-		}
+		/*.wrapper.style2 {
+			background-color: #0661B7;
+		}*/
 
 		.wrapper.style2-alt {
 			background-color: #3e4094;
 		}
 
 		.wrapper.style3 {
-			background-color: #b74e91;
+			background-color: #312472;
 		}
 
 		.wrapper.style3-alt {
@@ -3867,7 +3872,7 @@
 
 						#sidebar nav a:after {
 							background-image: none;
-							background-color: #b74e91;
+							background-color: #ffffff;
 						}
 
 		}
