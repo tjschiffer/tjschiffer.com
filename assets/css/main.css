@@ -3889,7 +3889,8 @@
 
 	#intro {
 		background-attachment: fixed;
-		background-image: url("images/intro.svg");
+		background-image: url("images/overlay.svg"), linear-gradient(45deg, #2085E4 5%, #0661B7 30%, #044A69);
+		/*background-image: url("images/intro.svg");*/
 		background-position: top right;
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
