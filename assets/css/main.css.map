@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "main.css",
+	"sources": [
+		"../../build/scss/main.scss",
+		"../../build/scss/flex.scss"
+	],
+	"names": [],
+	"mappings": "ACAA,AAAA,KAAK,CAAC;EACJ,OAAO,EAAE,IAAI;CACd"
+}
