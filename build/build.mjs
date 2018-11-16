@@ -36,15 +36,8 @@ sassFilesToBuild.forEach((sassFile) => {
   });
 });
 
-webpack(webpackConfig, (err, stats) => {
-  if (err) {
-    console.error(err.stack || err);
-    if (err.details) {
-      console.error(err.details);
-    }
-    return;
-  }
-
+const webpackPromise = util.promisify(webpack);
+webpackPromise(webpackConfig).then(stats => {
   const info = stats.toJson();
 
   if (stats.hasErrors()) {
@@ -54,4 +47,6 @@ webpack(webpackConfig, (err, stats) => {
   if (stats.hasWarnings()) {
     console.warn(info.warnings);
   }
+}).catch(err => {
+  console.error(err.stack || err);
 });
