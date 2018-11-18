@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development node --experimental-modules  build.mjs",
     "build": "cross-env NODE_ENV=production node --experimental-modules  build.mjs",
+    "watch-nodemon": "nodemon -e js,scss,mjs,json --exec 'npm run dev'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

@@ -7,13 +7,73 @@
   <link href="assets/css/main.css" rel="stylesheet">
 </head>
 <body>
-  <div id="app" class="flex min-height-100-vh">
-    <bg-color-changer class="padding-2">
-      <span style="color: #fff">hello</span>
+  <div id="app" class="flex height-100-vh">
+    <bg-color-changer class="side-bar padding-hor-2em flex flex--align-center font-white font-montserrat">
+      <div class="width-100 text-align-right font-size-1-1em">
+        <div class="margin-vert-1em">WELCOME</div>
+        <div class="margin-vert-1em">EXPERIENCE</div>
+        <div class="margin-vert-1em">EDUCATION</div>
+        <div class="margin-vert-1em">SKILLS</div>
+        <div class="margin-vert-1em">CODE SAMPLES</div>
+        <div class="margin-vert-1em">CONTACT</div>
+      </div>
     </bg-color-changer>
-    <text-color-changer class="padding-2">
-      <h1 class="margin-0 font-oswald font-size-3">TIMOTHY J. SCHIFFER</h1>
-    </text-color-changer>
+    <div class="padding-hor-2em height-100-vh overflow-y-scroll">
+      <div class="height-100-vh flex flex--align-center">
+        <div>
+          <h1 class="font-oswald font-size-5em margin-0 margin-bottom-15px">
+            <text-color-changer>TIMOTHY J. SCHIFFER</text-color-changer>
+          </h1>
+          <div class="font-size-1-1em">I am a Front End Software Engineer with a passion for improving.</div>
+        </div>
+      </div>
+      <div>
+        <div class="font-size-1-4em">Shapeways</div>
+        <div><span class="font-weight-bold">Senior Front End Software Engineer</span> - July 2018 to current</div>
+        <div><span class="font-weight-bold">Front End Software Engineer</span> - Sept 2016 to July 2018</div>
+        <div>
+          <ul>
+            <li>Team Lead for Creator Flow Funnel</li>
+            <ul>
+              <li><span class="font-weight-bold">Led team of four engineers</span> in redevelopment of main intake flow for all shapeways.com users</li>
+              <li><span class="font-weight-bold">Increased conversion for new users by 36%</span> by implementing streamlined UI and decreasing upload processing time</li>
+            </ul>
+          </ul>
+          <ul>
+            <li>Champion of Front End Architecture</li>
+            <ul>
+              <li class="font-weight-bold">Led framework transition from Backbone.js to Vue.js</li>
+              <li><span class="font-weight-bold">Implemented patterns and best practices</span> for Vue Instances and Components, Vuex modules, Flex Grid System, and BEM/SCSS modules</li>
+              <li>Contributed to implementation of high-performance View Component pattern for PHP with associated Factory Pattern to centralize database calls and decrease page load time</li>
+            </ul>
+          </ul>
+          <ul>
+            <li>Developed Node CLI to identify unused CSS in dynamic codebase and CMS</li>
+            <ul>
+              <li class="font-weight-bold">Reduced built CSS package by 38%</li>
+            </ul>
+          </ul>
+        </div>
+
+        <div class="font-size-1-4em">Regeneron Pharmaceuticals</div>
+        <div><span class="font-weight-bold">Process Development Engineer</span> - June 2010 to Sept 2016</div>
+        <div>
+          <ul>
+            <li>Lead of Automation Team</li>
+            <ul>
+              <li>Developed application for creating user defined dashboards for viewing and comparing lab data; reduced data-mining time by 95%</li>
+              <li>Managed summer intern as contributor to dashboard application with a focus on unit testing, peer code review and user documentation</li>
+            </ul>
+          </ul>
+          <ul>
+            <li>Project Lead for the “Paperless Lab Initiative”</li>
+            <ul>
+              <li>Conceived, developed, and launched “Sampling Sheet” application for data entry and display as replacement for paper records; achieved 100% user compliance due to intuitive, spreadsheet-like UI; reduced data entry time by over 90%</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 </html>

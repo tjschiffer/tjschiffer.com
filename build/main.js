@@ -25,7 +25,7 @@ const store = new Vuex.Store({
 });
 
 const colors = [
-  '#500000',
+  '#400000',
   '#000040',
   '#002000',
   '#351000',
@@ -42,7 +42,7 @@ const getApprovedColor = () => {
 
 setInterval(() => {
   store.commit('changeColor', getApprovedColor());
-}, 500);
+}, 1000);
 store.commit('changeColor', getApprovedColor());
 
 

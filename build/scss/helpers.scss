@@ -1,12 +1,34 @@
 
-.min-height-100-vh {
-  min-height: 100vh;
+.height-100-vh {
+  height: 100vh;
 }
 
 .margin-0 {
   margin: 0;
 }
 
-.padding-2 {
-  padding: 10px;
+.margin-bottom-15px {
+  margin-bottom: 15px;
+}
+
+.margin-vert-1em {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.overflow-y-scroll {
+  overflow-y: scroll;
+}
+
+.padding-hor-2em {
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.width-100 {
+  width: 100%;
 }

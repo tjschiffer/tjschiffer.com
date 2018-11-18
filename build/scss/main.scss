@@ -1,5 +1,12 @@
 
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 @import "normalize";
-@import "fonts";
+@import "font";
+@import "side-bar";
 @import "flex";
+@import "color-changer";
 @import "helpers";
+.hello { color: red }
