@@ -11,7 +11,7 @@ const store = new Vuex.Store({
   state: {
     color: '#000040',
     currentSection: 'welcome',
-    newSection: null
+    scrollToSection: null
   },
   mutations: {
     changeColor(state, color) {
@@ -20,8 +20,8 @@ const store = new Vuex.Store({
     updateCurrentSection(state, currentSection) {
       state.currentSection = currentSection;
     },
-    scrollToSection(state, newSection) {
-      state.newSection = newSection;
+    scrollToSection(state, scrollToSection) {
+      state.scrollToSection = scrollToSection;
     }
   },
 

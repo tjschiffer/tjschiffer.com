@@ -1,0 +1,7 @@
+@import "nav-variables";
+
+@include bp-mobile {
+  .nav {
+    height: $nav-height;
+  }
+}

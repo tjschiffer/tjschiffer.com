@@ -29,3 +29,9 @@
     max-width: 100%;
   }
 };
+
+@include bp-mobile {
+  .flex--dir-column-mob {
+    flex-direction: column;
+  }
+}
