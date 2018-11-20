@@ -5,14 +5,11 @@
 </template>
 
 <script>
-  import { mapState } from 'vuex'
-
   export default {
     name: 'text-color-changer',
     computed: {
-      ...mapState(['color']),
       textColor() {
-        return { color: this.color }
+        return { color: this.$store.state.color }
       }
     }
   }

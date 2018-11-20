@@ -452,6 +452,16 @@ body {
   max-width: 50%;
 }
 
+@media only screen and (max-width: 900px) {
+  .flex--wrap-tablet {
+    flex-wrap: wrap;
+  }
+  .flex__cel-1-1--tablet {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
 .color-changer__bg {
   transition: background-color ease-in-out 0.5s;
 }
@@ -481,6 +491,14 @@ body {
   margin-bottom: -1px;
   margin-left: 0.5em;
   width: 0.8em;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.display-block {
+  display: block;
 }
 
 .margin-0 {
@@ -517,18 +535,8 @@ body {
   margin-bottom: 1em;
 }
 
-.margin-vert-25vh {
-  margin-top: 25vh;
-  margin-bottom: 25vh;
-}
-
 .overflow-y-scroll {
   overflow-y: scroll;
-}
-
-.padding-hor-2em {
-  padding-left: 2em;
-  padding-right: 2em;
 }
 
 .padding-left-1-1em {
@@ -537,6 +545,21 @@ body {
 
 .padding-right-1-5em {
   padding-right: 1.5em;
+}
+
+.padding-hor-2em {
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.padding-vert-0-5em {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+.padding-vert-12-5vh {
+  padding-top: 12.5vh;
+  padding-bottom: 12.5vh;
 }
 
 .text-align-right {
@@ -573,6 +596,10 @@ body {
 
 .white-space-pre {
   white-space: pre;
+}
+
+.opacity-4 {
+  opacity: 0.4;
 }
 
 /*# sourceMappingURL=main.css.map */

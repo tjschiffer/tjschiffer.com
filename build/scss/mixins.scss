@@ -1,0 +1,36 @@
+// http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/
+@mixin bp-desktop {
+  @media only screen and (min-width: 901px) {
+    @content;
+  }
+}
+
+@mixin bp-tablet {
+  @media only screen and (max-width: 900px) {
+    @content;
+  }
+}
+
+@mixin bp-mobile {
+  @media only screen and (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  animation: #{$str};
+}

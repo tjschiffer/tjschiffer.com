@@ -5,14 +5,11 @@
 </template>
 
 <script>
-  import { mapState } from 'vuex'
-
   export default {
     name: 'bg-color-changer',
     computed: {
-      ...mapState(['color']),
       bgc() {
-        return { backgroundColor: this.color }
+        return { backgroundColor: this.$store.state.color }
       }
     }
   }

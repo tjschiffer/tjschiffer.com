@@ -3,32 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <title>Timothy J. Schiffer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="assets/js/build.js"></script>
   <link href="assets/css/main.css" rel="stylesheet">
 </head>
 <body>
   <div id="app" class="flex height-100vh">
     <bg-color-changer class="side-bar padding-hor-2em flex flex--align-center font-white font-montserrat">
-      <div class="width-100 text-align-right font-size-1-1em white-space-no-wrap">
-        <div class="margin-vert-1em">WELCOME</div>
-        <div class="margin-vert-1em">EXPERIENCE</div>
-        <div class="margin-vert-1em">EDUCATION</div>
-        <div class="margin-vert-1em">SKILLS</div>
-        <div class="margin-vert-1em">CODE SAMPLES</div>
-        <div class="margin-vert-1em">CONTACT</div>
-      </div>
+      <nav class="width-100 text-align-right font-size-1-1em white-space-no-wrap">
+        <div>
+          <nav-label class="padding-vert-0-5em">WELCOME</nav-label>
+          <nav-label class="padding-vert-0-5em">EXPERIENCE</nav-label>
+          <nav-label class="padding-vert-0-5em">EDUCATION</nav-label>
+          <nav-label class="padding-vert-0-5em">SKILLS</nav-label>
+          <nav-label class="padding-vert-0-5em">CODE SAMPLES</nav-label>
+          <nav-label class="padding-vert-0-5em">CONTACT</nav-label>
+        </div>
+      </nav>
     </bg-color-changer>
-    <div class="flex__cell height-100vh overflow-y-scroll">
-      <div class="padding-hor-2em">
+    <nav-content class="flex__cell height-100vh overflow-y-scroll">
+      <main class="padding-hor-2em">
         <div class="flex flex--align-center max-width-1000px height-100vh">
-          <div>
+          <nav-section section-title="welcome">
             <h1 class="font-oswald font-size-5em margin-0 margin-bottom-15px">
               <text-color-changer>TIMOTHY J. SCHIFFER</text-color-changer>
             </h1>
             <div class="font-size-1-1em">I am a Front End Software Engineer with a passion for improving.</div>
-          </div>
+          </nav-section>
         </div>
-        <div class="max-width-1000px margin-vert-25vh">
+
+
+        <nav-section section-title="experience" class="max-width-1000px padding-vert-12-5vh">
           <div class="font-size-1-4em">Shapeways</div>
           <div><span class="font-weight-bold">Senior Front End Software Engineer</span> - July 2018 to current</div>
           <div><span class="font-weight-bold">Front End Software Engineer</span> - Sept 2016 to July 2018</div>
@@ -73,10 +78,10 @@
               </ul>
             </ul>
           </div>
-        </div>
+        </nav-section>
 
 
-        <div class="max-width-1000px margin-vert-25vh">
+        <nav-section section-title="education" class="max-width-1000px padding-vert-12-5vh">
           <div class="font-size-1-4em">Rutgers, The State University of New Jersey</div>
           <div class="margin-vert-0-5em">
             <div><span class="font-weight-bold">Masters of Business and Science</span>, concentration in Information Technology</div>
@@ -89,9 +94,9 @@
             <div class="padding-left-1-1em">Honors Program Class of 2010, <span>magna cum laude</span></div>
             <div class="padding-left-1-1em white-space-pre">Cumulative GPA: 3.52        Major GPA: 3.69</div>
           </div>
-        </div>
+        </nav-section>
 
-        <div class="max-width-1000px margin-vert-25vh">
+        <nav-section section-title="skills" class="max-width-1000px padding-vert-12-5vh">
           <div class="font-size-1-4em">Expert</div>
           <div class="flex flex--align-center flex--wrap margin-right-neg-1-5em">
             <div class="skills-logo padding-right-1-5em margin-vert-1em">
@@ -125,10 +130,11 @@
               <img src="assets/img/php.svg" alt="PHP logo" class="height-100">
             </div>
           </div>
-        </div>
+        </nav-section>
 
-        <div class="max-width-1000px margin-vert-25vh flex flex--wrap margin-right-neg-1-5em">
-          <div class="flex__cell-1-2 padding-right-1-5em">
+        <nav-section section-title="code samples"
+                     class="max-width-1000px padding-vert-12-5vh flex flex--wrap-tablet margin-right-neg-1-5em">
+          <div class="flex__cell-1-2 flex__cel-1-1--tablet padding-right-1-5em margin-vert-1em">
             <div class="font-size-1-4em margin-bottom-0-5em">
               <a class="plain-link" href="//tjandnina.com" target="_blank">tjandnina.com</a>
             </div>
@@ -146,7 +152,7 @@
               Built with Node/Express, Vue, Webpack, Babel, and MySQL.
             </div>
           </div>
-          <div class="flex__cell-1-2 padding-right-1-5em">
+          <div class="flex__cell-1-2 flex__cel-1-1--tablet padding-right-1-5em margin-vert-1em">
             <div class="font-size-1-4em margin-bottom-0-5em">
               <a class="plain-link" href="/" target="_blank">tjschiffer.com</a>
             </div>
@@ -165,8 +171,9 @@
               Built with Vue, Vuex, Webpack, and Babel.
             </div>
           </div>
-        </div>
-        <div class="max-width-1000px margin-top-25vh margin-bottom-50vh-minus-54px">
+        </nav-section>
+
+        <nav-section section-title="contact" class="max-width-1000px margin-top-25vh margin-bottom-50vh-minus-54px">
           <div class="margin-bottom-0-5em">Please feel free to reach out to me.</div>
           <div class="margin-bottom-0-5em">
             <a href="mailto:tjschiffer@gmail.com" class="flex flex--align-center plain-link">
@@ -183,9 +190,9 @@
               <i class="icon-linkedin-squared font-size-1-2em"></i><div>linkedin.com/in/tjschiffer</div>
             </a>
           </div>
-        </div>
-      </div>
-    </div>
+        </nav-section>
+      </main>
+    </nav-content>
   </div>
 </body>
 </html>
