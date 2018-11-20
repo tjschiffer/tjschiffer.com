@@ -1,0 +1,16 @@
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+@import "mixins";
+@import "normalize";
+
+@import "fontello";
+@import "font";
+@import "side-bar";
+@import "flex";
+@import "color-changer";
+@import "skills-logo";
+@import "links";
+@import "helpers";

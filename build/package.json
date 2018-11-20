@@ -1,0 +1,42 @@
+{
+  "name": "build",
+  "version": "1.0.0",
+  "description": "Build tjschiffer.com",
+  "main": "build.mjs",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development node --experimental-modules  build.mjs",
+    "build": "cross-env NODE_ENV=production node --experimental-modules  build.mjs",
+    "watch-nodemon": "nodemon -e js,scss,mjs,json,vue --exec 'npm run dev'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tjschiffer/tjschiffer.com.git"
+  },
+  "author": "T.J. Schiffer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tjschiffer/tjschiffer.com/issues"
+  },
+  "homepage": "https://github.com/tjschiffer/tjschiffer.com#readme",
+  "dependencies": {
+    "debounce": "^1.2.0",
+    "vue": "^2.5.17",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-transform-regenerator": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "cross-env": "^5.2.0",
+    "css-loader": "^1.0.1",
+    "file-loader": "^2.0.0",
+    "node-sass": "^4.10.0",
+    "sass-loader": "^7.1.0",
+    "vue-loader": "^15.4.2",
+    "vue-template-compiler": "^2.5.17",
+    "webpack": "^4.25.1"
+  }
+}

@@ -1,0 +1,31 @@
+.flex {
+  display: flex;
+}
+
+.flex--align-center {
+  align-items: center;
+}
+
+.flex--wrap {
+  flex-wrap: wrap;
+}
+
+.flex__cell {
+  flex-grow: 1;
+}
+
+.flex__cell-1-2 {
+  flex-basis: 50%;
+  max-width: 50%;
+}
+
+@include bp-tablet {
+  .flex--wrap-tablet {
+    flex-wrap: wrap;
+  }
+
+  .flex__cel-1-1--tablet {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+};
