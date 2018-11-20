@@ -3,12 +3,24 @@
   margin: 0;
 }
 
+.margin-top-25vh {
+  margin-top: 25vh;
+}
+
+.margin-right-neg-1-5em {
+  margin-right: -1.5em;
+}
+
 .margin-bottom-15px {
   margin-bottom: 15px;
 }
 
 .margin-bottom-0-5em {
   margin-bottom: 0.5em;
+}
+
+.margin-bottom-50vh-minus-54px {
+  margin-bottom: calc(50vh - 54px);
 }
 
 .margin-vert-0-5em {
@@ -19,6 +31,11 @@
 .margin-vert-1em {
   margin-top: 1em;
   margin-bottom: 1em;
+}
+
+.margin-vert-25vh {
+  margin-top: 25vh;
+  margin-bottom: 25vh;
 }
 
 .overflow-y-scroll {
