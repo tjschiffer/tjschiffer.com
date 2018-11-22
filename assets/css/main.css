@@ -498,6 +498,10 @@ body {
   width: 0.8em;
 }
 
+.color-dark-blue {
+  color: #000040;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -569,6 +573,10 @@ body {
 
 .position-relative {
   position: relative;
+}
+
+.text-align-center {
+  text-align: center;
 }
 
 .text-align-right {
