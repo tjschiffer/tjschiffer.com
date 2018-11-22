@@ -11,10 +11,6 @@
   margin: 0;
 }
 
-.margin-top-25vh {
-  margin-top: 25vh;
-}
-
 .margin-right-neg-1-5em {
   margin-right: -1.5em;
 }
@@ -25,12 +21,6 @@
 
 .margin-bottom-0-5em {
   margin-bottom: 0.5em;
-}
-
-// This class allows the last section (contact)
-// to be centered next to the menu
-.margin-bottom-50vh-minus-54px {
-  margin-bottom: calc(50vh - 54px);
 }
 
 .margin-vert-0-5em {
@@ -46,6 +36,15 @@
 .overflow-y-scroll {
   overflow-y: scroll;
 }
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.padding-top-12-5vh {
+  padding-top: 12.5vh;
+}
+
 .padding-left-1-1em {
   padding-left: 1.1em;
 }
@@ -69,12 +68,28 @@
   padding-bottom: 12.5vh;
 }
 
+.position-relative {
+  position: relative;
+}
+
 .text-align-right {
   text-align: right;
 }
 
+.text-transform-uppercase {
+  text-transform: uppercase;
+}
+
+.transition-top-0-25s {
+  transition: top 0.25s ease-in-out;
+}
+
 .max-width-1000px {
   max-width: 1000px;
+}
+
+.max-width-100vw {
+  max-width: 100vw;
 }
 
 .height-100 {
@@ -107,4 +122,41 @@
 
 .opacity-4 {
   opacity: 0.4;
+}
+
+@include bp-desktop {
+  .display-none--desktop {
+    display: none;
+  }
+}
+
+@include bp-tablet {
+  .padding-hor-1-5em--tab {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
+
+  .display-none--tab {
+    display: none;
+  }
+}
+
+@include bp-mobile {
+  .padding-hor-1em--mob {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  .padding-vert-5vh--mob {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+  }
+
+  .padding-top-5vh--mob {
+    padding-top: 5vh;
+  }
+
+  .display-none--mob {
+    display: none;
+  }
 }

@@ -3,27 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <title>Timothy J. Schiffer</title>
-  <link rel="shortcut icon" href="favicon.svg">
+  <link rel="shortcut icon" href="favicon.svg?v1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="assets/js/build.js"></script>
   <link href="assets/css/main.css" rel="stylesheet">
 </head>
 <body>
-  <div id="app" class="flex height-100vh">
-    <bg-color-changer class="side-bar padding-hor-2em flex flex--align-center font-white font-montserrat">
-      <nav class="width-100 text-align-right font-size-1-1em white-space-no-wrap">
-        <div>
-          <nav-label class="padding-vert-0-5em">WELCOME</nav-label>
-          <nav-label class="padding-vert-0-5em">EXPERIENCE</nav-label>
-          <nav-label class="padding-vert-0-5em">EDUCATION</nav-label>
-          <nav-label class="padding-vert-0-5em">SKILLS</nav-label>
-          <nav-label class="padding-vert-0-5em">CODE SAMPLES</nav-label>
-          <nav-label class="padding-vert-0-5em">CONTACT</nav-label>
+  <div id="app" class="flex height-100vh flex--dir-column-mob max-width-100vw overflow-hidden">
+    <bg-color-changer class="font-white font-montserrat text-transform-uppercase nav">
+      <nav class="width-100 height-100">
+        <div class="flex flex--align-center height-100 display-none--mob">
+          <div class="width-100
+                      text-align-right
+                      font-size-1-1em
+                      padding-hor-2em
+                      padding-hor-1-5em--tab
+                      white-space-no-wrap">
+
+            <nav-labels></nav-labels>
+          </div>
+        </div>
+        <div class="display-none--desktop display-none--tab height-100">
+          <nav-labels-mob></nav-labels-mob>
         </div>
       </nav>
     </bg-color-changer>
-    <nav-content class="flex__cell height-100vh overflow-y-scroll">
-      <main class="padding-hor-2em">
+    <nav-content class="flex__cell height-100vh overflow-y-scroll nav-content">
+      <main class="padding-hor-2em padding-hor-1-5em--tab padding-hor-1em--mob">
         <div class="flex flex--align-center max-width-1000px height-100vh">
           <nav-section section-title="welcome">
             <h1 class="font-oswald font-size-5em margin-0 margin-bottom-15px">
@@ -34,7 +40,7 @@
         </div>
 
 
-        <nav-section section-title="experience" class="max-width-1000px padding-vert-12-5vh">
+        <nav-section section-title="experience" class="max-width-1000px padding-vert-12-5vh padding-vert-5vh--mob">
           <div class="font-size-1-4em">Shapeways</div>
           <div><span class="font-weight-bold">Senior Front End Software Engineer</span> - July 2018 to current</div>
           <div><span class="font-weight-bold">Front End Software Engineer</span> - Sept 2016 to July 2018</div>
@@ -82,7 +88,7 @@
         </nav-section>
 
 
-        <nav-section section-title="education" class="max-width-1000px padding-vert-12-5vh">
+        <nav-section section-title="education" class="max-width-1000px padding-vert-12-5vh padding-vert-5vh--mob">
           <div class="font-size-1-4em">Rutgers, The State University of New Jersey</div>
           <div class="margin-vert-0-5em">
             <div><span class="font-weight-bold">Masters of Business and Science</span>, concentration in Information Technology</div>
@@ -97,7 +103,8 @@
           </div>
         </nav-section>
 
-        <nav-section section-title="skills" class="max-width-1000px padding-vert-12-5vh">
+        <nav-section section-title="skills"
+                     class="max-width-1000px padding-vert-12-5vh padding-vert-5vh--mob overflow-hidden">
           <div class="font-size-1-4em">Expert</div>
           <div class="flex flex--align-center flex--wrap margin-right-neg-1-5em">
             <div class="skills-logo padding-right-1-5em margin-vert-1em">
@@ -107,19 +114,35 @@
               <img src="assets/img/CSS3.svg" alt="CSS3 logo" class="height-100">
             </div>
             <div class="skills-logo padding-right-1-5em margin-vert-1em">
-              <img src="assets/img/js.webp" alt="Javascript logo" class="height-100">
+              <picture>
+                <source srcset="assets/img/js.webp" type="image/webp">
+                <source srcset="assets/img/js.png" type="image/jpeg">
+                <img src="assets/img/js.png"  class="height-100" alt="picture of us">
+              </picture>
             </div>
             <div class="skills-logo padding-right-1-5em margin-vert-1em">
               <img src="assets/img/node.svg" alt="Node JS logo" class="height-100">
             </div>
             <div class="skills-logo padding-right-1-5em margin-vert-1em">
-              <img src="assets/img/vue.webp" alt="Vue JS logo" class="height-100">
+              <picture>
+                <source srcset="assets/img/vue.webp" type="image/webp">
+                <source srcset="assets/img/vue.png" type="image/jpeg">
+                <img src="assets/img/vue.png"  class="height-100" alt="picture of us">
+              </picture>
             </div>
             <div class="skills-logo padding-right-1-5em margin-vert-1em">
-              <img src="assets/img/backbone.webp" alt="Backbone logo" class="height-100">
+              <picture>
+                <source srcset="assets/img/backbone.webp" type="image/webp">
+                <source srcset="assets/img/backbone.png" type="image/jpeg">
+                <img src="assets/img/backbone.png"  class="height-100" alt="picture of us">
+              </picture>
             </div>
             <div class="skills-logo padding-right-1-5em margin-vert-1em">
-              <img src="assets/img/sql.png" alt="SQL logo" class="height-100">
+              <picture>
+                <source srcset="assets/img/sql.webp" type="image/webp">
+                <source srcset="assets/img/sql.png" type="image/jpeg">
+                <img src="assets/img/sql.png"  class="height-100" alt="picture of us">
+              </picture>
             </div>
           </div>
           <div class="font-size-1-4em">Knowledgeable</div>
@@ -134,47 +157,53 @@
         </nav-section>
 
         <nav-section section-title="code samples"
-                     class="max-width-1000px padding-vert-12-5vh flex flex--wrap-tablet margin-right-neg-1-5em">
-          <div class="flex__cell-1-2 flex__cel-1-1--tablet padding-right-1-5em margin-vert-1em">
-            <div class="font-size-1-4em margin-bottom-0-5em">
-              <a class="plain-link" href="//tjandnina.com" target="_blank">tjandnina.com</a>
+                     class="max-width-1000px padding-vert-12-5vh padding-vert-5vh--mob overflow-hidden">
+          <div class="flex flex--wrap-tab flex--wrap-mob margin-right-neg-1-5em">
+            <div class="flex__cell-1-2 flex__cell-1-1--tab flex__cell-1-1--mob padding-right-1-5em margin-vert-1em">
+              <div class="font-size-1-4em margin-bottom-0-5em">
+                <a class="plain-link" href="//tjandnina.com" target="_blank">tjandnina.com</a>
+              </div>
+              <div class="margin-vert-0-5em">
+                <a class="plain-link link-icon"
+                   href="//github.com/tjschiffer/tjandnina.com"
+                   target="_blank">github.com/tjschiffer/tjandnina.com</a>
+              </div>
+              <div class="margin-vert-0-5em">
+                Our multi-language wedding website with information for our guests with RSVP portal.
+                Also has admin page to see guests' status (attending which events and notes) with filtering
+                based on name and status.
+              </div>
+              <div class="margin-vert-0-5em">
+                Built with Node/Express, Vue, Webpack, Babel, and MySQL.
+              </div>
             </div>
-            <div class="margin-vert-0-5em">
-              <a class="plain-link link-icon"
-                 href="//github.com/tjschiffer/tjandnina.com"
-                 target="_blank">github.com/tjschiffer/tjandnina.com</a>
-            </div>
-            <div class="margin-vert-0-5em">
-              Our multi-language wedding website with information for our guests with RSVP portal.
-              Also has admin page to see guests' status (attending which events and notes) with filtering
-              based on name and status.
-            </div>
-            <div class="margin-vert-0-5em">
-              Built with Node/Express, Vue, Webpack, Babel, and MySQL.
-            </div>
-          </div>
-          <div class="flex__cell-1-2 flex__cel-1-1--tablet padding-right-1-5em margin-vert-1em">
-            <div class="font-size-1-4em margin-bottom-0-5em">
-              <a class="plain-link" href="/" target="_blank">tjschiffer.com</a>
-            </div>
-            <div class="margin-vert-0-5em">
-              <a class="plain-link link-icon"
-                 href="//github.com/tjschiffer/tjschiffer.com"
-                 target="_blank">github.com/tjschiffer/tjschiffer.com</a>
-            </div>
-            <div class="margin-vert-0-5em">
-              This website! Information on my profession experience, education, skillset, code samples,
-              and contact information. Page state updates with scroll and accent color (side bar background
-              and title color) is a product of the UTC time of day. Anyone else viewing this page right now is seeing
-              the same accent color as you.
-            </div>
-            <div class="margin-vert-0-5em">
-              Built with Vue, Vuex, Webpack, and Babel.
+            <div class="flex__cell-1-2 flex__cell-1-1--tab flex__cell-1-1--mob padding-right-1-5em margin-vert-1em">
+              <div class="font-size-1-4em margin-bottom-0-5em">
+                <a class="plain-link" href="/" target="_blank">tjschiffer.com</a>
+              </div>
+              <div class="margin-vert-0-5em">
+                <a class="plain-link link-icon"
+                   href="//github.com/tjschiffer/tjschiffer.com"
+                   target="_blank">github.com/tjschiffer/tjschiffer.com</a>
+              </div>
+              <div class="margin-vert-0-5em">
+                This website! Information on my profession experience, education, skillset, code samples,
+                and contact information. Page state updates with scroll and accent color (side bar background
+                and title color) is a product of the UTC time of day. Anyone else viewing this page right now is seeing
+                the same accent color as you.
+              </div>
+              <div class="margin-vert-0-5em">
+                Built with Vue, Vuex, Webpack, and Babel.
+              </div>
             </div>
           </div>
         </nav-section>
 
-        <nav-section section-title="contact" class="max-width-1000px margin-top-25vh margin-bottom-50vh-minus-54px">
+        <nav-section section-title="contact"
+                     class="max-width-1000px
+                            padding-vert-12-5vh
+                            padding-vert-5vh--mob
+                            last-section">
           <div class="margin-bottom-0-5em">Please feel free to reach out to me.</div>
           <div class="margin-bottom-0-5em">
             <a href="mailto:tjschiffer@gmail.com" class="flex flex--align-center plain-link">

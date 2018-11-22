@@ -20,7 +20,7 @@
       // Debounce scrolling update 10ms for performance
       this.debouncedUpdateNavElements = debounce(this.updateNavElements, 10);
     },
-    computed: mapState(['newSection']),
+    computed: mapState(['scrollToSection']),
     methods: {
       navContentScroll() {
         const newScrollTop = this.$el.scrollTop;
@@ -41,13 +41,14 @@
       }
     },
     watch: {
-      newSection(newSection) {
-        const scrollToElements = this.$el.querySelectorAll('[data-section="' + newSection + '"');
-        if (scrollToElements.length === 0) {
-          return;
+      scrollToSection(scrollToSection) {
+        for (let child of this.$children) {
+            // If a child element is found the section title indicated by the scroll to section
+            if (child.sectionTitle === scrollToSection) {
+                child.$el.scrollIntoView({behavior: "smooth", block: "center"});
+                return;
+            }
         }
-        // If a section label is clicked on, scroll it into view in the center of the page
-        scrollToElements[0].scrollIntoView({behavior: "smooth", block: "center"});
       }
     }
   }

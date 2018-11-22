@@ -4,14 +4,16 @@ import BgColorChanger from "./vue-components/bg-color-changer";
 import TextColorChanger from "./vue-components/text-color-changer";
 import NavContent from "./vue-components/nav-content"
 import NavSection from "./vue-components/nav-section"
-import NavLabel from "./vue-components/nav-label"
+import NavLabels from "./vue-components/nav-labels"
+import NavLabelsMob from "./vue-components/nav-labels-mob"
 
 Vue.use(Vuex);
 const store = new Vuex.Store({
   state: {
     color: '#000040',
+    sections: [],
     currentSection: 'welcome',
-    newSection: null
+    scrollToSection: null
   },
   mutations: {
     changeColor(state, color) {
@@ -20,8 +22,11 @@ const store = new Vuex.Store({
     updateCurrentSection(state, currentSection) {
       state.currentSection = currentSection;
     },
-    scrollToSection(state, newSection) {
-      state.newSection = newSection;
+    scrollToSection(state, scrollToSection) {
+      state.scrollToSection = scrollToSection;
+    },
+    registerSection(state, newSection) {
+      state.sections.push(newSection);
     }
   },
 
@@ -58,7 +63,8 @@ window.onload = () => {
       TextColorChanger,
       NavContent,
       NavSection,
-      NavLabel
+      NavLabels,
+      NavLabelsMob
     }
   });
 };

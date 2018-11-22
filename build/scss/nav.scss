@@ -1,0 +1,12 @@
+@import "nav-variables";
+
+.nav {
+  width: 18em;
+}
+
+@include bp-mobile {
+  .nav {
+    height: $nav-height;
+    width: auto;
+  }
+}
