@@ -8,6 +8,11 @@
   export default {
     name: 'nav-section',
     props: { sectionTitle: String },
+    created() {
+      if (this.sectionTitle) {
+        this.$store.commit('registerSection', this.sectionTitle);
+      }
+    },
     methods: {
       updateNavElement(direction) {
         const middleOfScreen = Math.floor(window.innerHeight / 2);

@@ -1,0 +1,13 @@
+// Add to the last section
+// in order to have bottom scroll
+// center the last section vertically
+
+.last-section {
+  margin-bottom: calc(37.5vh - 54px);
+}
+
+@include bp-mobile {
+  .last-section {
+    margin-bottom: calc(45vh - 54px);
+  }
+}

@@ -435,6 +435,10 @@ body {
   align-items: center;
 }
 
+.flex--justify-center {
+  justify-content: center;
+}
+
 .flex--wrap {
   flex-wrap: wrap;
 }
@@ -448,19 +452,26 @@ body {
   max-width: 50%;
 }
 
-@media only screen and (max-width: 900px) {
-  .flex--wrap-tablet {
+@media only screen and (max-width: 900px) and (min-width: 601px) {
+  .flex--wrap-tab {
     flex-wrap: wrap;
   }
-  .flex__cel-1-1--tablet {
+  .flex__cell-1-1--tab {
     flex-basis: 100%;
     max-width: 100%;
   }
 }
 
 @media only screen and (max-width: 600px) {
+  .flex--wrap-mob {
+    flex-wrap: wrap;
+  }
   .flex--dir-column-mob {
     flex-direction: column;
+  }
+  .flex__cell-1-1--mob {
+    flex-basis: 100%;
+    max-width: 100%;
   }
 }
 
@@ -511,10 +522,6 @@ body {
   margin-bottom: 0.5em;
 }
 
-.margin-bottom-50vh-minus-54px {
-  margin-bottom: calc(50vh - 54px);
-}
-
 .margin-vert-0-5em {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
@@ -523,10 +530,6 @@ body {
 .margin-vert-1em {
   margin-top: 1em;
   margin-bottom: 1em;
-}
-
-.overflow-x-hidden {
-  overflow-x: hidden;
 }
 
 .overflow-y-scroll {
@@ -564,8 +567,20 @@ body {
   padding-bottom: 12.5vh;
 }
 
+.position-relative {
+  position: relative;
+}
+
 .text-align-right {
   text-align: right;
+}
+
+.text-transform-uppercase {
+  text-transform: uppercase;
+}
+
+.transition-top-0-25s {
+  transition: top 0.25s ease-in-out;
 }
 
 .max-width-1000px {
@@ -608,10 +623,19 @@ body {
   opacity: 0.4;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (min-width: 901px) {
+  .display-none--desktop {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 900px) and (min-width: 601px) {
   .padding-hor-1-5em--tab {
     padding-left: 1.5em;
     padding-right: 1.5em;
+  }
+  .display-none--tab {
+    display: none;
   }
 }
 
@@ -627,6 +651,19 @@ body {
   .padding-top-5vh--mob {
     padding-top: 5vh;
   }
+  .display-none--mob {
+    display: none;
+  }
+}
+
+.last-section {
+  margin-bottom: calc(37.5vh - 54px);
+}
+
+@media only screen and (max-width: 600px) {
+  .last-section {
+    margin-bottom: calc(45vh - 54px);
+  }
 }
 
 .color-changer__bg {
@@ -637,13 +674,14 @@ body {
   transition: color ease-in-out 0.5s;
 }
 
-.side-bar {
+.nav {
   width: 18em;
 }
 
 @media only screen and (max-width: 600px) {
   .nav {
     height: 60px;
+    width: auto;
   }
 }
 

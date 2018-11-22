@@ -6,6 +6,10 @@
   align-items: center;
 }
 
+.flex--justify-center {
+  justify-content: center;
+}
+
 .flex--wrap {
   flex-wrap: wrap;
 }
@@ -20,18 +24,27 @@
 }
 
 @include bp-tablet {
-  .flex--wrap-tablet {
+  .flex--wrap-tab {
     flex-wrap: wrap;
   }
 
-  .flex__cel-1-1--tablet {
+  .flex__cell-1-1--tab {
     flex-basis: 100%;
     max-width: 100%;
   }
 };
 
 @include bp-mobile {
+  .flex--wrap-mob {
+    flex-wrap: wrap;
+  }
+
   .flex--dir-column-mob {
     flex-direction: column;
+  }
+
+  .flex__cell-1-1--mob {
+    flex-basis: 100%;
+    max-width: 100%;
   }
 }
