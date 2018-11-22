@@ -9,7 +9,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, '../assets/js/'),
     publicPath: '/assets/js/',
-    filename: 'build.js'
+    filename: 'main.js'
   },
   plugins: [
     new VueLoaderPlugin()
