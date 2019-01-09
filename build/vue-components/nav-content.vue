@@ -33,8 +33,8 @@
           if (typeof child.updateNavElement === 'function') {
             // This is not ideal. Vue has no way to emit events to child elements
             // and props would only work for elements within scope of this component.
-            // The other option would be to use the Vuex store to change some state
-            // and have the children components watch that state change.
+            // The other option would be to use the Vuex store or parent state data to change
+            // some state and have the children components watch that state change.
             child.updateNavElement(this.direction);
           }
         });
