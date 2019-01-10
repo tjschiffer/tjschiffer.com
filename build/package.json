@@ -7,6 +7,7 @@
     "dev": "cross-env NODE_ENV=development node --experimental-modules  build.mjs",
     "build": "cross-env NODE_ENV=production node --experimental-modules  build.mjs",
     "watch-nodemon": "nodemon -e js,scss,mjs,json,vue --exec 'npm run dev'",
+    "lint": "npx eslint --ext .js,.vue .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -32,6 +33,13 @@
     "babel-polyfill": "^6.26.0",
     "cross-env": "^5.2.0",
     "css-loader": "^1.0.1",
+    "eslint": "^5.12.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^5.1.0",
     "file-loader": "^2.0.0",
     "node-sass": "^4.10.0",
     "sass-loader": "^7.1.0",

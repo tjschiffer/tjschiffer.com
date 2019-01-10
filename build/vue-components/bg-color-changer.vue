@@ -1,16 +1,19 @@
 <template>
-  <div class="color-changer__bg" v-bind:style="bgc">
-    <slot></slot>
+  <div
+    class="color-changer__bg"
+    :style="bgc"
+  >
+    <slot />
   </div>
 </template>
 
 <script>
-  export default {
-    name: 'bg-color-changer',
-    computed: {
-      bgc() {
-        return { backgroundColor: this.$store.state.color }
-      }
+export default {
+  name: 'BgColorChanger',
+  computed: {
+    bgc () {
+      return { backgroundColor: this.$store.state.color }
     }
   }
+}
 </script>
