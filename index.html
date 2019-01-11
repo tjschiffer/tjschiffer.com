@@ -193,7 +193,12 @@
                 the same theme color as you.
               </div>
               <div class="margin-vert-0-5em">
-                Built with Vue, Vuex, Webpack, and Babel.
+                Additionally, this website is written in both Vue/Vuex and React/Redux. You are currently viewing the
+                website in <span id="currentFramework"></span>. Click <a v-on:click="updateFramework" class="click-link">here to switch to
+                <span id="otherFramework" ref="otherFramework"></span></a>.
+              </div>
+              <div class="margin-vert-0-5em">
+                Built with Vue, Vuex, React, Redux, Webpack, and Babel.
               </div>
             </div>
           </div>

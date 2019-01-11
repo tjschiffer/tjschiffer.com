@@ -498,6 +498,11 @@ body {
   width: 0.8em;
 }
 
+.click-link {
+  color: grey;
+  cursor: pointer;
+}
+
 .color-dark-blue {
   color: #000040;
 }
