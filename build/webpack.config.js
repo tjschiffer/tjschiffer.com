@@ -1,8 +1,8 @@
-const path = require('path');
-const webpack = require('webpack');
-require('babel-polyfill');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
-const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const path = require('path')
+const webpack = require('webpack')
+require('babel-polyfill')
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 module.exports = {
   entry: ['babel-polyfill', path.join(__dirname, '../build/main.js')],
@@ -20,17 +20,25 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          'vue-style-loader',
+          'style-loader',
           'css-loader'
-        ],
+        ]
       },
       {
         test: /\.scss$/,
         use: [
-          'vue-style-loader',
+          'style-loader',
           'css-loader',
           'sass-loader'
-        ],
+        ]
+      }, {
+        test: /\.(html)$/,
+        use: {
+          loader: 'html-loader',
+          options: {
+            attrs: [':data-src']
+          }
+        }
       },
       {
         test: /\.vue$/,
@@ -55,16 +63,27 @@ module.exports = {
         }
       },
       {
+        test: /\.rt$/,
+        loader: 'react-templates-loader?readFileSync'
+      },
+      {
         test: /\.m?js$/,
         loader: 'babel-loader',
         exclude: /node_modules/
       },
       {
-        test: /\.(png|jpg|gif|svg)$/,
-        loader: 'file-loader',
-        options: {
-          name: '[name].[ext]?[hash]'
-        }
+        test: /\.(jpe?g|png|gif)$/,
+        use: [{
+          /* inline if smaller than 10 KB, otherwise load as a file */
+          loader: 'url-loader',
+          options: {
+            limit: 10000
+          }
+        }]
+      },
+      {
+        test: /\.(eot|svg|ttf|woff2?|otf)$/,
+        use: 'file-loader'
       }
     ]
   },
@@ -83,10 +102,10 @@ module.exports = {
     hints: false
   },
   devtool: '#eval-source-map'
-};
+}
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports.devtool = '#source-map';
+  module.exports.devtool = '#source-map'
   // http://vue-loader.vuejs.org/en/workflow/production.html
   module.exports.plugins = (module.exports.plugins || []).concat([
     new webpack.DefinePlugin({

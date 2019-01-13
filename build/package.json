@@ -7,6 +7,7 @@
     "dev": "cross-env NODE_ENV=development node --experimental-modules  build.mjs",
     "build": "cross-env NODE_ENV=production node --experimental-modules  build.mjs",
     "watch-nodemon": "nodemon -e js,scss,mjs,json,vue --exec 'npm run dev'",
+    "lint": "npx eslint --ext .js,.vue .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,24 +20,48 @@
     "url": "https://github.com/tjschiffer/tjschiffer.com/issues"
   },
   "homepage": "https://github.com/tjschiffer/tjschiffer.com#readme",
-  "dependencies": {
-    "debounce": "^1.2.0",
-    "vue": "^2.5.17",
-    "vuex": "^3.0.1"
-  },
   "devDependencies": {
-    "@babel/core": "^7.1.2",
-    "@babel/preset-env": "^7.1.0",
-    "babel-loader": "^8.0.4",
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.5",
     "babel-plugin-transform-regenerator": "^6.26.0",
     "babel-polyfill": "^6.26.0",
     "cross-env": "^5.2.0",
     "css-loader": "^1.0.1",
+    "debounce": "^1.2.0",
+    "eslint": "^5.12.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^5.1.0",
     "file-loader": "^2.0.0",
-    "node-sass": "^4.10.0",
+    "html-loader": "^0.5.5",
+    "htmltojsx": "^0.3.0",
+    "node-sass": "^4.11.0",
+    "prop-types": "^15.6.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-redux": "^6.0.0",
+    "react-templates": "^0.6.3",
+    "react-templates-loader": "^0.6.5",
+    "redux": "^4.0.1",
     "sass-loader": "^7.1.0",
-    "vue-loader": "^15.4.2",
-    "vue-template-compiler": "^2.5.17",
-    "webpack": "^4.25.1"
+    "style-loader": "^0.23.1",
+    "uglifyjs-webpack-plugin": "^2.1.1",
+    "url-loader": "^1.1.2",
+    "vue": "^2.5.17",
+    "vue-loader": "^15.5.1",
+    "vue-template-compiler": "^2.5.22",
+    "vuex": "^3.0.1",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1"
+  },
+  "dependencies": {
+    "save-dev": "^2.0.0"
   }
 }
