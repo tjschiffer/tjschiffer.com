@@ -50,7 +50,6 @@ const initialize = () => {
     data: {
       calculatedHexColorInterval: null
     },
-    store,
     created () {
       this.$store.commit('changeColor', getCalculatedHexColor())
       // store and wrap it to check the color theme every 5 seconds
@@ -62,10 +61,11 @@ const initialize = () => {
       clearInterval(this.calculatedHexColorInterval)
     },
     methods: {
-      updateFramework() {
-        window.updateFramework(this.$refs.otherFramework.innerText)
+      updateFramework () {
+        window.updateFramework('React')
       }
-    }
+    },
+    store
   })
 }
 
