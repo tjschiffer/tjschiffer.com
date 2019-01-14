@@ -174,10 +174,10 @@ class App extends React.Component {
               <div className="flex flex--wrap-tab flex--wrap-mob margin-right-neg-1-5em">
                 <div className="flex__cell-1-2 flex__cell-1-1--tab flex__cell-1-1--mob padding-right-1-5em margin-vert-1em">
                   <div className="font-size-1-4em margin-bottom-0-5em">
-                    <a className="plain-link" href="//tjandnina.com" target="_blank">tjandnina.com</a>
+                    <a className="plain-link" href="//tjandnina.com" target="_blank" rel="noopener">tjandnina.com</a>
                   </div>
                   <div className="margin-vert-0-5em">
-                    <a className="plain-link link-icon" href="//github.com/tjschiffer/tjandnina.com" target="_blank">github.com/tjschiffer/tjandnina.com</a>
+                    <a className="plain-link link-icon" href="//github.com/tjschiffer/tjandnina.com" target="_blank" rel="noopener">github.com/tjschiffer/tjandnina.com</a>
                   </div>
                   <div className="margin-vert-0-5em">
                     Our multi-language wedding website with information for our guests with RSVP portal.
@@ -190,10 +190,10 @@ class App extends React.Component {
                 </div>
                 <div className="flex__cell-1-2 flex__cell-1-1--tab flex__cell-1-1--mob padding-right-1-5em margin-vert-1em">
                   <div className="font-size-1-4em margin-bottom-0-5em">
-                    <a className="plain-link" href="/" target="_blank">tjschiffer.com</a>
+                    <a className="plain-link" href="/" target="_blank" rel="noopener">tjschiffer.com</a>
                   </div>
                   <div className="margin-vert-0-5em">
-                    <a className="plain-link link-icon" href="//github.com/tjschiffer/tjschiffer.com" target="_blank">github.com/tjschiffer/tjschiffer.com</a>
+                    <a className="plain-link link-icon" href="//github.com/tjschiffer/tjschiffer.com" target="_blank" rel="noopener">github.com/tjschiffer/tjschiffer.com</a>
                   </div>
                   <div className="margin-vert-0-5em">
                     This website! Information on my profession experience, education, skillset, code samples,
@@ -217,17 +217,17 @@ class App extends React.Component {
                           last-section">
               <div className="margin-bottom-0-5em">Please feel free to reach out to me.</div>
               <div className="margin-bottom-0-5em">
-                <a href="mailto:tjschiffer@gmail.com" target="_blank" className="flex flex--align-center plain-link">
+                <a href="mailto:tjschiffer@gmail.com" target="_blank" rel="noopener" className="flex flex--align-center plain-link">
                   <i className="icon-mail-alt font-size-1-2em" /><div>tjschiffer@gmail.com</div>
                 </a>
               </div>
               <div className="margin-bottom-0-5em">
-                <a href="//github.com/tjschiffer" target="_blank" className="flex flex--align-center plain-link">
+                <a href="//github.com/tjschiffer" target="_blank" rel="noopener" className="flex flex--align-center plain-link">
                   <i className="icon-github-circled font-size-1-2em" /><div>github.com/tjschiffer</div>
                 </a>
               </div>
               <div className="margin-bottom-0-5em">
-                <a href="//linkedin.com/in/tjschiffer" target="_blank" className="flex flex--align-center plain-link">
+                <a href="//linkedin.com/in/tjschiffer" target="_blank" rel="noopener" className="flex flex--align-center plain-link">
                   <i className="icon-linkedin-squared font-size-1-2em" /><div>linkedin.com/in/tjschiffer</div>
                 </a>
               </div>
