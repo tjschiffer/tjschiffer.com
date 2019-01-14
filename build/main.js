@@ -6,9 +6,21 @@ const frameworkState = {
   'currentFramework': 'Vue', // default to vue,
   'otherFramework': 'React'
 }
-const updateFramework = async (newFramework) => {
+
+const loadFrameworkManager = async (framework) => {
+  return await import('./' + framework.toLowerCase() + 'Manager')
+}
+
+/**
+ * Update framework used by the entire page,
+ * place on the window so all frameworks can access it
+ *
+ * @param newFramework
+ * @return {Promise<void>}
+ */
+window.updateFramework = async (newFramework) => {
   if (frameworkState.currentFramework !== newFramework) {
-    const currentFrameworkManager = await import('./' + frameworkState.currentFramework.toLowerCase() + 'Manager')
+    const currentFrameworkManager = await loadFrameworkManager(frameworkState.currentFramework)
     currentFrameworkManager.default.destroy()
     if (initialBody) {
       document.body.innerHTML = initialBody
@@ -22,22 +34,20 @@ const updateFramework = async (newFramework) => {
   }
 
   // Dynamic load the framework
-  import('./' + newFramework.toLowerCase() + 'Manager').then(frameworkManager => {
-    frameworkManager.default.initialize()
-  })
+  const frameworkManager = await loadFrameworkManager(newFramework)
+  frameworkManager.default.initialize()
 }
+
+const url = new URL(window.location.href)
+const frameworkFromUrl = url.searchParams.get('currentFramework')
+let currentFramework = frameworkState.currentFramework
+if (frameworkFromUrl && Object.values(frameworkState).indexOf(frameworkFromUrl) > -1) {
+  currentFramework = frameworkFromUrl
+}
+// Pre load the framework so it will be cached
+loadFrameworkManager(currentFramework).then()
 
 window.onload = async () => {
   initialBody = document.body.innerHTML // Cache the html of the body since it will be modified by the frameworks
-  var url = new URL(window.location.href)
-  const frameworkFromUrl = url.searchParams.get('currentFramework')
-  let currentFramework = frameworkState.currentFramework
-  if (frameworkFromUrl && Object.values(frameworkState).indexOf(frameworkFromUrl) > -1) {
-    currentFramework = frameworkFromUrl
-  }
-
-  await updateFramework(currentFramework) // load the default framework on load
+  await window.updateFramework(currentFramework) // load the default framework on load
 }
-
-// put the function on the window so any framework can access it
-window.updateFramework = updateFramework
