@@ -25,8 +25,8 @@ class App extends React.Component {
     clearInterval(this.calculatedHexColorInterval)
   }
 
-  static updateFramework () {
-    window.updateFramework('Vue')
+  static async updateFramework () {
+    await window.updateFramework('Vue')
   }
 
   render () {
