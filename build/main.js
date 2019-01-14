@@ -15,6 +15,10 @@ const updateFramework = async (newFramework) => {
     }
     frameworkState.otherFramework = frameworkState.currentFramework
     frameworkState.currentFramework = newFramework
+
+    const url = new URL(window.location.href)
+    url.searchParams.set('currentFramework', newFramework)
+    history.replaceState({}, document.title, '?' + url.searchParams.toString())
   }
 
   // Dynamic load the framework
@@ -24,8 +28,15 @@ const updateFramework = async (newFramework) => {
 }
 
 window.onload = async () => {
-  initialBody = document.body.innerHTML // Cache the html of the body since
-  await updateFramework(frameworkState.currentFramework) // load the default framework on load
+  initialBody = document.body.innerHTML // Cache the html of the body since it will be modified by the frameworks
+  var url = new URL(window.location.href)
+  const frameworkFromUrl = url.searchParams.get('currentFramework')
+  let currentFramework = frameworkState.currentFramework
+  if (frameworkFromUrl && Object.values(frameworkState).indexOf(frameworkFromUrl) > -1) {
+    currentFramework = frameworkFromUrl
+  }
+
+  await updateFramework(currentFramework) // load the default framework on load
 }
 
 // put the function on the window so any framework can access it
