@@ -23,6 +23,9 @@ const initialize = () => {
     }
   }
 
+  // Note that Redux documentation recommends having the reducer(s) and store in separate files
+  // See Redux examples in documentation: https://redux.js.org/introduction/examples
+  // With such a simple store and availability of redux-react binding, separate files were not necessary
   const store = createStore((state = initialState, action) => {
     switch (action.type) {
       case CHANGE_COLOR:
