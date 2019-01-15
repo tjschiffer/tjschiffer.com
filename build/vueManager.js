@@ -61,7 +61,7 @@ const initialize = () => {
       clearInterval(this.calculatedHexColorInterval)
     },
     methods: {
-      async updateFramework() {
+      async updateFramework () {
         await window.updateFramework('React')
       }
     },
