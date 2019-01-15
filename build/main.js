@@ -7,8 +7,11 @@ const frameworkState = {
   'otherFramework': 'React'
 }
 
+// This will be a map of frameworks as keys and the frameworkManager as the value
+const frameworkManagers = {}
+
 const loadFrameworkManager = async (framework) => {
-  return await import('./' + framework.toLowerCase() + 'Manager')
+  return import('./' + framework.toLowerCase() + 'Manager')
 }
 
 /**
@@ -20,8 +23,10 @@ const loadFrameworkManager = async (framework) => {
  */
 window.updateFramework = async (newFramework) => {
   if (frameworkState.currentFramework !== newFramework) {
-    const currentFrameworkManager = await loadFrameworkManager(frameworkState.currentFramework)
-    currentFrameworkManager.default.destroy()
+    if (!frameworkManagers[frameworkState.currentFramework]) {
+      frameworkManagers[frameworkState.currentFramework] = await loadFrameworkManager(frameworkState.currentFramework)
+    }
+    frameworkManagers[frameworkState.currentFramework].default.destroy()
     if (initialBody) {
       document.body.innerHTML = initialBody
     }
@@ -33,9 +38,11 @@ window.updateFramework = async (newFramework) => {
     history.replaceState({}, document.title, '?' + url.searchParams.toString())
   }
 
-  // Dynamic load the framework
-  const frameworkManager = await loadFrameworkManager(newFramework)
-  frameworkManager.default.initialize()
+  // Dynamical load the framework if it hasn't been already loaded
+  if (!frameworkManagers[newFramework]) {
+    frameworkManagers[newFramework] = await loadFrameworkManager(newFramework)
+  }
+  frameworkManagers[newFramework].default.initialize()
 }
 
 const url = new URL(window.location.href)
@@ -45,7 +52,9 @@ if (frameworkFromUrl && Object.values(frameworkState).indexOf(frameworkFromUrl) 
   currentFramework = frameworkFromUrl
 }
 // Pre load the framework so it will be cached
-loadFrameworkManager(currentFramework).then()
+loadFrameworkManager(currentFramework).then(currentFrameworkManager =>
+  frameworkManagers[currentFramework] = currentFrameworkManager
+)
 
 window.onload = async () => {
   initialBody = document.body.innerHTML // Cache the html of the body since it will be modified by the frameworks

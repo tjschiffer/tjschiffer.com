@@ -2,8 +2,12 @@ import React from 'react'
 import { connect } from 'react-redux'
 import '../../assets/css/main.css'
 
+/**
+ * Generates navigation labels on mobile screens.
+ */
 class NavLabelsMob extends React.Component {
   render () {
+    // Determine which section will be shown in the navigation pane
     const currentSection = this.props.currentSection
     let sectionNumber = this.props.navLabels.indexOf(currentSection)
     if (sectionNumber === -1) {

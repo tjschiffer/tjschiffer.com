@@ -5,6 +5,9 @@ import PropTypes from 'prop-types'
 import { REGISTER_SECTION, UPDATE_CURRENT_SECTION } from '../redux/actionTypes'
 import ReactDOM from 'react-dom'
 
+/**
+ * Content section on the page.
+ */
 class NavSection extends React.Component {
   constructor (props) {
     super(props)
