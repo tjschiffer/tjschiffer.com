@@ -5,6 +5,9 @@ import '../../assets/css/main.css'
 import { UPDATE_NAV_CONTENT_SCROLL } from '../redux/actionTypes'
 import debounce from 'debounce'
 
+/**
+ * Wraps all the content sections and updates state on scroll.
+ */
 class NavContent extends React.Component {
   constructor (props) {
     super(props)

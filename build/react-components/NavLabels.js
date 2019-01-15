@@ -3,6 +3,9 @@ import { connect } from 'react-redux'
 import '../../assets/css/main.css'
 import { SCROLL_TO_SECTION } from '../redux/actionTypes'
 
+/**
+ * Generates the navigation labels on desktop.
+ */
 class NavLabels extends React.Component {
   render () {
     const navLabels = this.props.navLabels.map(sectionTitle => {
